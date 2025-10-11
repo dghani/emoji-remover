@@ -4,12 +4,12 @@ A fast, multi-threaded command-line tool to remove emojis from source code files
 
 ## Features
 
-- 🚀 **Fast**: Multi-threaded processing using Rayon
-- 🔍 **Smart**: Respects `.gitignore` files by default
-- 🎯 **Flexible**: Process individual files or entire directories
-- 🛡️ **Safe**: Dry-run mode to preview changes before applying
-- 🧹 **Clean**: Removes trailing spaces left after emoji removal
-- 📦 **Zero Dependencies**: Single binary with no runtime dependencies
+- **Fast**: Multi-threaded processing using Rayon
+- **Smart**: Respects `.gitignore` files by default
+- **Flexible**: Process individual files or entire directories
+- **Safe**: Dry-run mode to preview changes before applying
+- **Clean**: Removes trailing spaces left after emoji removal
+- **Zero Dependencies**: Single binary with no runtime dependencies
 
 ## Installation
 
