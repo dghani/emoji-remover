@@ -1,6 +1,8 @@
 # emoji-remover
 
-A fast, multi-threaded command-line tool to remove emojis from source code files. Built with Rust for performance and reliability.
+A command-line/pre-commit tool to remove emojis from code files.
+
+Because your code deserves better than AI-generated emoji spam. Built with Rust for blazing-fast emoji annihilation.
 
 ## Features
 
@@ -10,6 +12,7 @@ A fast, multi-threaded command-line tool to remove emojis from source code files
 - **Safe**: Dry-run mode to preview changes before applying
 - **Clean**: Removes trailing spaces left after emoji removal
 - **Zero Dependencies**: Single binary with no runtime dependencies
+- **Install as a Git Pre-commit Hook**: Follow the instructions below to set up emoji-remover as a pre-commit hook.
 
 ## Installation
 
