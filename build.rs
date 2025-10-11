@@ -41,7 +41,7 @@ fn main() {
 
 fn extract_emojis(json_content: &str, emojis: &mut Vec<String>) {
     let data: Vec<serde_json::Value> = serde_json::from_str(json_content).unwrap();
-    
+
     for item in data {
         if let Some(arr) = item.as_array() {
             if arr.len() == 4 {
