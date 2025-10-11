@@ -50,14 +50,41 @@ emoji-remover --quiet path/to/project/
 
 ## As a Git Pre-commit Hook
 
-The repository includes an installation script for setting up emoji-remover as a pre-commit hook:
+### Option 1: If installed via cargo
+
+Create `.git/hooks/pre-commit` in your repository:
 
 ```bash
-# Clone the repo
+#!/bin/bash
+echo "Running emoji remover..."
+
+# Get list of staged files
+FILES=$(git diff --cached --name-only --diff-filter=ACM)
+
+if [ -n "$FILES" ]; then
+    # Run emoji-remover on staged files only
+    echo "$FILES" | xargs emoji-remover --quiet
+    
+    # Re-add the modified files
+    echo "$FILES" | xargs git add
+fi
+
+exit 0
+```
+
+Then make it executable:
+```bash
+chmod +x .git/hooks/pre-commit
+```
+
+### Option 2: If built from source
+
+The repository includes an installation script:
+
+```bash
+# Clone and build
 git clone https://github.com/jamiepine/emoji-remover.git
 cd emoji-remover
-
-# Build the tool
 cargo build --release
 
 # Install as pre-commit hook in your project
