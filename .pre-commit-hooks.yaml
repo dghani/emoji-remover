@@ -1,0 +1,7 @@
+- id: emoji-remover
+  name: Remove Emojis
+  description: Remove emojis from source code files
+  entry: /path/to/emoji-remover
+  language: system
+  types: [text]
+  pass_filenames: true
