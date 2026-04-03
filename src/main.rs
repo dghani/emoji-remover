@@ -108,6 +108,10 @@ fn process_file(path: &Path, dry_run: bool, quiet: bool) -> Option<usize> {
         }
     });
 
+    let arrow_count = cleaned_content.matches("→").count();
+    emoji_count += arrow_count;
+    let cleaned_content = cleaned_content.replace("→", "->");
+
     if emoji_count > 0 {
         if !quiet {
             println!(
